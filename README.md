@@ -1,3 +1,3 @@
-# DiaCorpus Project with the Directorate of Defence Research and Development (DDRD)
+# DiaCorpus Project with Israel Innovation Institute
 
-Creating Dialectic Arabic Corpora. A collaborative project between the Data Science Institute (DSI) and the Directorate of Defence Research and Development (DDRD). Part of the National Language Processing plan of Israel.
+A joint project between the Data Science Institute at Reichman University and the Israel Innovation Institute. Part of the National Language Processing plan of Israel.
