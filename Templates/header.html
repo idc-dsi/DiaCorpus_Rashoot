@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/DiaCorpus_Rashoot/CSS/header.css">
+</head>
+<body>
+    <header>
+        <div class="navbar-container">
+            <div class="logo">
+                <a href="/DiaCorpus_Rashoot/index.html">
+                    <img src="/DiaCorpus_Rashoot/images/logos/reichman_white.png" alt="DSI Logo">
+                    <img src="/DiaCorpus_Rashoot/images/logos/dsi_white.png" alt="DSI Logo">
+                </a>
+            </div>
+            <label for="nav-toggle" class="nav-toggle-label" onclick="toggleSidebar()">
+                &#9776;
+            </label>
+            <nav>
+                <ul>
+                    <li><a href="/DiaCorpus_Rashoot/index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Project</a>
+                        <ul class="dropdown-content">
+                            <li><a href="/DiaCorpus_Rashoot/Templates/about.html">About</a></li>
+                            <li><a href="/DiaCorpus_Rashoot/Templates/license.html">Licensing</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Dataset</a>
+                        <ul class="dropdown-content">
+                            <li><a href="/DiaCorpus_Rashoot/Templates/dataset_info.html">General Information</a></li>
+                            <li><a href="/DiaCorpus_Rashoot/Templates/data.html">Data</a></li>
+                            <li><a href="/DiaCorpus_Rashoot/Templates/models.html">Models</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">About Us</a>
+                        <ul class="dropdown-content">
+                            <li><a href="/DiaCorpus_Rashoot/Templates/dsi.html">Institute</a></li>
+                            <li><a href="/DiaCorpus_Rashoot/Templates/team.html">Team</a></li>
+                            <li><a href="/DiaCorpus_Rashoot/Templates/contact_us.html">Contact Us</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sidebar for smaller screens -->
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
+        <a href="/DiaCorpus_Rashoot/index.html" onclick="closeSidebar()">Home</a>
+        <a href="#" onclick="toggleDropdown('projectDropdown')">Project</a>
+        <div id="projectDropdown" class="dropdown-container">
+            <a href="/DiaCorpus_Rashoot/Templates/about.html" onclick="closeSidebar()">About</a>
+            <a href="/DiaCorpus_Rashoot/Templates/license.html" onclick="closeSidebar()">Licensing</a>
+        </div>
+        <a href="#" onclick="toggleDropdown('datasetDropdown')">Dataset</a>
+        <div id="datasetDropdown" class="dropdown-container">
+            <a href="/DiaCorpus_Rashoot/Templates/dataset_info.html" onclick="closeSidebar()">General Information</a>
+            <a href="/DiaCorpus_Rashoot/Templates/data.html" onclick="closeSidebar()">Data</a>
+            <a href="/DiaCorpus_Rashoot/Templates/models.html" onclick="closeSidebar()">Models</a>
+        </div>
+        <a href="#" onclick="toggleDropdown('aboutDropdown')">About Us</a>
+        <div id="aboutDropdown" class="dropdown-container">
+            <a href="/DiaCorpus_Rashoot/Templates/dsi.html" onclick="closeSidebar()">Institute</a>
+            <a href="/DiaCorpus_Rashoot/Templates/team.html" onclick="closeSidebar()">Team</a>
+            <a href="/DiaCorpus_Rashoot/Templates/contact_us.html" onclick="closeSidebar()">Contact Us</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            if (sidebar.classList.contains('open')) {
+                sidebar.classList.remove('open');
+            } else {
+                sidebar.classList.add('open');
+            }
+        }
+
+        function closeSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            sidebar.classList.remove('open');
+        }
+
+        function toggleDropdown(id) {
+            const dropdown = document.getElementById(id);
+            if (dropdown.classList.contains('active')) {
+                dropdown.classList.remove('active');
+            } else {
+                dropdown.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>

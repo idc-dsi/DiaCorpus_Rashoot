@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Dataset Collection</title>
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/data.css">
+    <link rel="stylesheet" href="../CSS/about.css">
+    <script src="../js/includeHTML.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="..\DiaCorpus_Rashoot\images\favicons\favicon.ico">
+<style>
+    .project-container p {
+        line-height: 1.5; /* Adjusts line spacing, lower value reduces spacing */
+    }
+    
+    .project-container ul li {
+        font-size: 1em; /* Sets font size of list items */
+    }
+    .project-container h3 {
+        font-size: 1.2em; 
+        margin-bottom: 5px; 
+    }
+    .project-container h4 {
+        font-size: 1.1em; 
+        margin-bottom: 5px; 
+    }
+    
+    .project-container ul {
+        margin-bottom: 5px;
+    }
+    
+</style>
+</head>
+<body>
+    <!-- Include the header component -->
+    <div data-include="header.html"></div>
+
+    <div class="content-container">
+        <h1>Models</h1>
+        <p>Our collection of NLP models is designed for processing Arabic dialects, offering state-of-the-art solutions for various natural language understanding tasks.</p>
+        <table>
+            <tr>
+                <th>Type</th>
+            </tr>
+            <tr>
+                <td>Alignment</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="project-container">
+        <h1>Model Information</h1>
+        <h2>Translation</h2>
+        <p>Our objective was to create a model capable of enhancing transcribed Arabic texts to establish an accurate Palestinian Israeli dialect in Arabic.<br>
+            We used a pretrained summarization model called <a href="https://huggingface.co/moussaKam/AraBART" target="_blank">AraBART</a>.<br>
+            Our training data consisted of 70,000 pairs of source and target texts. The source texts were transcripts produced by Azure Video Indexer AI, while the target texts were human-made transcriptions.<br>
+            The model was trained on a single GPU for 3 epochs, taking approximately 4 hours to complete training.</p>
+            
+
+        <h3>Results</h3>
+        <p>We evaluated the model’s performance by comparing the translation outputs to the true human-made translations.
+           The results indicate a substantial improvement over the original transcriptions in terms of accuracy, as measured by BLEU and ROUGE scores.</p>
+
+        <h4>Comparison of Translation and True Translation</h4>
+        <ul>
+            <li><strong>BLEU Score:</strong> Mean: 0.7578, Median: 1.0</li>
+            <li><strong>ROUGE-1:</strong> Mean: 0.9243, Median: 1.0</li>
+            <li><strong>ROUGE-2:</strong> Mean: 0.8333, Median: 1.0</li>
+        </ul>
+
+        <h4>Comparison of Original and True Translation</h4>
+        <ul>
+            <li><strong>BLEU Score:</strong> Mean: 0.6518, Median: 0.6690</li>
+            <li><strong>ROUGE-1:</strong> Mean: 0.8828, Median: 0.9412</li>
+            <li><strong>ROUGE-2:</strong> Mean: 0.7572, Median: 0.8235</li>
+        </ul>
+
+        <p>These results demonstrate a significant improvement, particularly when examining the median scores, which reach near-perfect values for the model-generated translations.</p>
+
+        <h4>Error Reduction</h4>
+        <p>By defining the error as the difference between the score and a perfect match (1), we observe the following error reductions in the model-generated translations compared to the original:</p>
+        <ul>
+            <li><strong>BLEU:</strong> Error reduced by 30.5%</li>
+            <li><strong>ROUGE-1:</strong> Error reduced by 35.5%</li>
+            <li><strong>ROUGE-2:</strong> Error reduced by 31.5%</li>
+        </ul>
+        
+        <h3>Model Access</h3>
+        <p>To try the model online you can try the below link.</p>
+        <a href="https://audiototextpipline.azurewebsites.net/" target="_blank">Text Enhancment</a>
+        <p>To request access to any of the Model listed above above, please visit the following link. In the request form, please specify the Models you are interested in.</p>
+        <a href="../Templates/requestData.html">Request Model Access</a>
+    </div>
+
+
+</body>
+</html>

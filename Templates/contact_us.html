@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/contact_us.css">
+    <script src="../js/includeHTML.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="..\DiaCorpus_Rashoot\images\favicons\favicon.ico">
+</head>
+<body>
+    <!-- Include the header component -->
+    <div data-include="header.html"></div>
+    
+    <div class="content-container">
+        <h1 class="center">Contact Us</h1>
+        <div id="formkeep-embed" data-formkeep-url="https://formkeep.com/p/366c6f87dc37dc155bc7e4c5bf02e209?embedded=1"></div>
+
+        <script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
+        <script type="text/javascript" src="https://formkeep-production-herokuapp-com.global.ssl.fastly.net/formkeep-embed.js"></script>
+
+        <!-- Get notified when the form is submitted, add your own code below: -->
+        <script>
+            const formkeepEmbed = document.querySelector('#formkeep-embed');
+
+            formkeepEmbed.addEventListener('formkeep-embed:submitting', _event => {
+                console.log('Submitting form...');
+            });
+
+            formkeepEmbed.addEventListener('formkeep-embed:submitted', _event => {
+                console.log('Submitted form...');
+            });
+        </script>
+    </div>
+</body>
+</html>

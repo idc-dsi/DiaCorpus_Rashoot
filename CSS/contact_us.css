@@ -1,0 +1,41 @@
+/* General body styles to match the home page */
+body {
+    margin: 20px;
+    padding-top: 60px;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main container styles */
+.content-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+
+/* Styles for the back link */
+.content-container a {
+    color: blue;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+.content-container a:hover {
+    color: darkblue;
+}
+
+/* Centered heading styles */
+.center {
+    text-align: center;
+}

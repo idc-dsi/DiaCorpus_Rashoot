@@ -1,0 +1,133 @@
+/* General body styles to match the home page */
+body {
+    margin: 20px;
+    padding-top: 60px;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main container styles */
+.content-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+
+/* Heading styles */
+.content-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.content-container h2 {
+    font-size: 1.8em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #344C64;
+    text-align: left;
+    width: 100%;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+/* Paragraph styles */
+.content-container p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ccc;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+/* Alternating row colors */
+tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(even) {
+    background-color: #e9e9e9;
+}
+
+/* Link styles */
+.content-container a {
+    color: #56513D;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.content-container a:hover {
+    color: #4d4835;
+    text-decoration: underline;
+}
+
+/* Specific link styles for the data request link */
+.content-container a[href*="requestData.html"] {
+    color: blue;
+}
+
+.content-container a[href*="requestData.html"]:hover {
+    color: darkblue;
+}
+
+/* Media queries to adjust content width on different devices */
+@media (max-width: 600px) {
+    .content-container {
+        padding: 10px;
+    }
+
+
+    .content-container h1,
+    .content-container h2 {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 992px) {
+    .content-container {
+        padding: 15px;
+    }
+}
+
+@media (min-width: 993px) {
+    .content-container {
+        padding: 20px;
+    }
+}

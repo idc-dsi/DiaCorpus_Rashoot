@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Data</title>
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/requestData.css">
+    <script src="../js/includeHTML.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="..\DiaCorpus_Rashoot\images\favicons\favicon.ico">
+    <style>
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Include the header component -->
+    <div data-include="header.html"></div>
+
+    <div class="content-container">
+        <a href="./data">Back</a>
+        <h1 class="center">Data & Model Request</h1>
+
+        <div id="formkeep-embed" data-formkeep-url="https://formkeep.com/p/19a6d6f3640eb3a7c7e563a65a846d0d?embedded=1"></div>
+
+        <script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
+        <script type="text/javascript" src="https://cdn.formkeep.com/formkeep-embed.js"></script>
+        
+        <!-- Get notified when the form is submitted, add your own code below: -->
+        <script>
+        const formkeepEmbed = document.querySelector('#formkeep-embed')
+        
+        formkeepEmbed.addEventListener('formkeep-embed:submitting', _event => {
+          console.log('Submitting form...')
+        })
+        
+        formkeepEmbed.addEventListener('formkeep-embed:submitted', _event => {
+          console.log('Submitted form...')
+        })
+        </script>
+    </div>
+</body>
+</html>

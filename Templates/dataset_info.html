@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataset Information</title>
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/about.css">
+    <script src="../js/includeHTML.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="..\DiaCorpus_Rashoot\images\favicons\favicon.ico">
+    <style>
+        /* Custom paragraph with adjusted margins */
+        custom-p {
+            margin-top: -10px;
+            font-size: 1.2em;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+        }
+
+        /* Increase bullet point size */
+        .info-list {
+            list-style-type: disc;
+            list-style-position: inside;
+            font-size: 1.1em; /* Increase the size of the bullet point */
+        }
+
+        /* Adjust line spacing between list items */
+        .info-list li {
+            line-height: 1.2; /* Decrease line height to shorten spacing between lines */
+            margin-bottom: 5px; /* Optional: add space between each list item for readability */
+        }
+
+        /* Indent additional lines */
+        .info-list li {
+            text-indent: -1.4em; /* Adjust this value according to your bullet size */
+            padding-left: 1.1em; /* Ensure the first line aligns with the bullet */
+        }
+        .project-container li{
+            font-size: 1.1em;
+        }
+
+        .project-container h2{
+            margin-left: -1px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Include the header component -->
+    <div data-include="header.html"></div>
+
+    <div class="project-container">
+        <h1>Dataset Information</h1>
+        
+        <h2>DiaSet</h2>
+            <custom-p>Our data collection process for DiaSet focuses on both YouTube podcasts and interviews, aiming to capture authentic dialogues in the **Palestinian Israeli dialect (PAL)**. Below is a breakdown of the dataset and the analysis we perform:</custom-p>
+
+            <h3>Data Collection</h3>
+            <ul>
+                <li><strong>YouTube Podcasts</strong>: We gathered 83 hours of recorded content from 55 podcast episodes, featuring conversations between native Arabic speakers in PAL. Each podcast was selected based on its length, sound quality, variety of topics, and its availability under a Creative Commons license.</li>
+                <li><strong>Simulated Interviews</strong>: In addition to the podcasts, we conducted 46 face-to-face interviews with students aged 18-28, all native PAL speakers. The interviews, averaging 21 minutes each, were recorded using professional equipment. Our participants represented diverse backgrounds, primarily from northern Israel, with an almost equal gender split (56% male, 44% female). A total of 15 hours of recorded interviews were collected.</li>
+            </ul>
+
+            <h3>Annotation Process</h3>
+            <custom-p>The <strong>Anno-DiaSet</strong> dataset includes annotations from 45 podcast episodes and 26 interviews, containing approximately 23K text units. Annotators adhered to detailed guidelines, with any disagreements being resolved by a third party. For the Named Entity Recognition (NER) task, annotators achieved a pairwise agreement of 72%, while sentiment annotation averaged 68%, with the majority of disagreements between neutral-positive and neutral-negative labels.</custom-p>
+
+            <h3>Sentiment Analysis</h3>
+            <custom-p>Our sentiment analysis categorizes text based on polarity—positive, neutral, or negative. In total, we labeled 22,814 text instances. The sentiment distribution is as follows:</custom-p>
+            <ul>
+                <li><strong>Positive</strong>: 24%</li>
+                <li><strong>Neutral</strong>: 50%</li>
+                <li><strong>Negative</strong>: 26%</li>
+            </ul>
+            <custom-p>Each sentiment label was carefully reviewed and assigned by a majority vote, with a fourth reviewer stepping in when necessary.</custom-p>
+
+            <h3>Emotion Analysis</h3>
+            <custom-p>For emotion detection, we applied the following categories: Neutral, Happy, Sad, Anger, Grateful, Surprise, and Fear. The dataset contains 22,754 text instances, with the following distribution:</custom-p>
+            <ul>
+                <li><strong>Neutral</strong>: 73%</li>
+                <li><strong>Happy</strong>: 10%</li>
+                <li><strong>Sad</strong>: 6%</li>
+                <li><strong>Anger</strong>: 6%</li>
+                <li><strong>Grateful</strong>: 2%</li>
+                <li><strong>Surprise</strong>: 2%</li>
+                <li><strong>Fear</strong>: 1%</li>
+            </ul>
+
+            <h3>Named Entity Recognition (NER)</h3>
+            <custom-p>The dataset includes 23.2K text instances, 42% of which contain at least one named entity. In total, there are 430,916 words in the dataset, with 6% tagged as entities. We follow standard NER categories: Person (PER), Location (LOC), Organization (ORG), and Miscellaneous (MISC). resulting in the identification of 24,405 named entities. The distribution is as follows:</custom-p>
+            <ul>
+                <li><strong>Locations (LOC)</strong>: 35%</li>
+                <li><strong>Miscellaneous (MISC)</strong>: 34%</li>
+                <li><strong>Persons (PER)</strong>: 18%</li>
+                <li><strong>Organizations (ORG)</strong>: 13%</li>
+            </ul>
+
+               
+        <h2>Name Entity Recognition - Expansion </h2>
+        <custom-p>The source of this data is the same YouTube podcast referenced above. Annotators were provided with 14 entities to identify, as detailed below. <br>
+            The dataset comprises 6k sentences, with 59.5% containing at least one named entity. In total, the dataset includes 170k words, of which 6% (10,421) are tagged as named entities. The distribution is as follows:</custom-p>
+
+            <ul>
+                <li><strong>Geopolitical Entities (GPE)</strong>: 23.5%</li>
+                <li><strong>Miscellaneous (MISC)</strong>: 17.6%</li>
+                <li><strong>Persons (PER)</strong>: 14.8%</li>
+                <li><strong>Organizations (ORG)</strong>: 12.4%</li>
+                <li><strong>Nationalities, Religious or Political Groups (NORP)</strong>: 5.6%</li>
+                <li><strong>Titles (TTL)</strong>: 5.4%</li>
+                <li><strong>Locations (LOC)</strong>: 5.1%</li>
+                <li><strong>Products (PRODUCT)</strong>: 3.8%</li>
+                <li><strong>Facilities (FAC)</strong>: 3.8%</li>
+                <li><strong>Events (EVENT)</strong>: 3.2%</li>
+                <li><strong>Occupations (OCC)</strong>: 2.2%</li>
+                <li><strong>Languages (LANGUAGE)</strong>: 1.3%</li>
+                <li><strong>Works of Art (WOA)</strong>: 0.9%</li>
+                <li><strong>Money Currency (MONEY CURR)</strong>: 0.4%</li>
+            </ul>
+
+
+    <h2>Topic Categorization</h2>
+        <custom-p> The source of this data is the same YouTube podcast referenced above.
+         To determine initial topic labels, we applied BERT-Topic, treating each sentence as an independent document for clustering.
+         We then manually reviewed and refined the topic groups generated by the model, ultimately defining 20 primary topics based on the frequency of sentence assignments,
+         relevance, and thematic importance.</custom-p>
+
+        <h3>Annotation Process</h3>
+        <custom-p>Annotators were provided with 21 labels, representing 20 main topics plus an “Other” option for sentences that did not fit any predefined category.
+         When choosing “Other,” annotators were instructed to enter a relevant topic as free text. However, in the final dataset,
+         we grouped all “Other” responses under a single label.<br>
+         Each sentence annotated by three independent annotators.
+         In cases of annotation discrepancies, we resolved ties by majority vote.
+        </custom-p>
+
+        <h3>Topics</h3>   
+        <custom-p>This dataset contains 8,745 labeled sentences, each assigned a topic when applicable.
+            In podcasts, some sentences function as transitional moments or "small talk"—brief exchanges that sustain conversational flow without addressing specific topics.
+            As a result, 69.5% of sentences in the dataset are assigned with a topic.
+            <br>
+            The topic distribution is as follows:</custom-p>
+            <ul>
+                <li><strong>Other</strong>: 33.15%</li>
+                <li><strong>Food</strong>: 6.75%</li>
+                <li><strong>Politics</strong>: 6.72%</li>
+                <li><strong>Family</strong>: 6.1%</li>
+                <li><strong>Culture</strong>: 5.47%</li>
+                <li><strong>Education</strong>: 4.96%</li>
+                <li><strong>Palestine</strong>: 4.93%</li>
+                <li><strong>Media</strong>: 4.18%</li>
+                <li><strong>Economics</strong>: 3.91%</li>
+                <li><strong>Countries</strong>: 3.81%</li>
+                <li><strong>Art</strong>: 3.21%</li>
+                <li><strong>Palestine-Israel</strong>: 2.84%</li>
+                <li><strong>Journalism</strong>: 2.74%</li>
+                <li><strong>Israel</strong>: 2.61%</li>
+                <li><strong>Islam</strong>: 1.98%</li>
+                <li><strong>Prison</strong>: 1.77%</li>
+                <li><strong>Army</strong>: 1.24%</li>
+                <li><strong>Medical</strong>: 1.05%</li>
+                <li><strong>Photography</strong>: 1.02%</li>
+                <li><strong>Racism</strong>: 0.57%</li>
+                <li><strong>Music</strong>: 0.52%</li>
+                <li><strong>Languages</strong>: 0.47%</li>
+            </ul>
+            
+                
+
+    </div>
+
+    
+</body>
+</html>

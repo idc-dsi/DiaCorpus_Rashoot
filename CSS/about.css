@@ -1,0 +1,110 @@
+/* General body styles to match the home page */
+body {
+    margin: 20px;
+    padding-top: 60px;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main container styles */
+.project-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+
+/* Heading styles */
+.project-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    align-items: center;
+    color: #000000;
+}
+
+.project-container h2 {
+    font-size: 1.8em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #344C64;
+    /* Matches the button color for visual consistency */
+    text-align: left;
+    /* Left-aligned */
+    width: 100%;
+    /* Ensure it spans the full width */
+}
+
+/* Paragraph styles */
+.project-container p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Link styles */
+.project-container a {
+    color: blue;
+    /* Blue color for links */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.project-container a:hover {
+    color: blue;
+    /* Blue color on hover */
+    text-decoration: underline;
+}
+
+.project-container a:visited {
+    color: blue;
+    /* Blue color for visited links */
+}
+
+/* Media queries to adjust content width on different devices */
+@media (max-width: 600px) {
+    .project-container {
+        padding: 10px;
+        margin: 0 auto;
+        /* Center the block horizontally */
+        margin-top: 50px;
+        width: 90%;
+        /* Adjust the width as needed */
+    }
+
+    .project-container h1,
+    .project-container h2 {
+        text-align: center;
+        width: 100%;
+    }
+
+    .project-container p {
+        /* Align text inside the block to the left */
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 992px) {
+    .project-container {
+        padding: 15px;
+    }
+}
+
+@media (min-width: 993px) {
+    .project-container {
+        padding: 20px;
+    }
+}
